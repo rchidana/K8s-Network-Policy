@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app-tier: UI
+  namespace: secured-apps
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app-tier: UI
+  template:
+    metadata:
+      labels:
+        app-tier: UI
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
