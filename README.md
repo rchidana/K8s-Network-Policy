@@ -25,3 +25,5 @@ Install Cilium as DaemonSet in your Minikube:
 	
 	#Wait untill all required Cilium components come up & get to 'RUNNING STATE'
 	kubectl -n kube-system get pods --watch	
+	
+YouTube Video Tutorial explaining this Demo : https://youtu.be/3c-zuZkTcyc
